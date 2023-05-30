@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { InicioComponent } from './inicio/inicio.component';
+import { EnviarhomeGuard } from './guards/enviarhome.guard';
+import { EnviarlogearGuard } from './guards/enviarlogear.guard';
+
+const routes: Routes = [
+  {path:'',component:InicioComponent,canActivate:[EnviarhomeGuard]},
+  {path:'ingreso', loadChildren: () => import("./ingreso/ingreso.module").then(m=>m.IngresoModule)},
+  {path:'home', loadChildren: () => import("./home/home.module").then(m=>m.HomeModule),canActivate:[EnviarlogearGuard]},
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

@@ -1,0 +1,31 @@
+.general
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../../assets/imggrand.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1
+{
+    font-family: 'miFuente';
+    color: orange;
+    word-wrap: break-word;
+    font-size: 4rem;
+    text-align: center;
+}
+@font-face
+{
+    font-family: 'miFuente';
+    src: url(../../../super.ttf);
+}   
+@media (max-width:600px)
+{
+    h1
+    {
+        font-size: 2.5rem;
+    }
+}

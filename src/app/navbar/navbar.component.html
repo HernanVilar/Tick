@@ -1,0 +1,22 @@
+<header>
+
+<div class="container">
+
+    <div id="home">
+        <img src="../../assets/boleto.png" alt="">
+        <p  [routerLink] = "['']">Ticketera</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a *ngIf="!e.estadoCuenta"  (click) = "open_Ingresar_Dialog_header2()"> Regístrate</a></li>
+            <li><a *ngIf="!e.estadoCuenta"  (click) = "open_Ingresar_Dialog_header()" >Login</a></li>
+            <li><a  [routerLink] ="['ingreso/contacto']">Contacto</a></li>
+            <li><a *ngIf="e.estadoCuenta" (click) = "Salir()">Salir</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+
+</header>
