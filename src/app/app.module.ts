@@ -17,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-
+import { PruebaComponent } from './prueba/prueba.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     RegistrarComponent,
     LoginComponent,
+    PruebaComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatIconModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

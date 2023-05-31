@@ -1,0 +1,44 @@
+.principal
+{
+  min-height: 100vh;
+  background-color: antiquewhite;
+}
+
+
+
+table {
+    width: 100%;
+  }
+  .d
+  {
+    max-width: 700px;
+    max-height: 472px;
+    margin: auto;
+    overflow-y: auto;
+    border: solid 2px black;
+  }
+  h1
+  {
+    text-align: center;
+  }
+
+
+ .solotop
+ {
+  background-color:beige;
+ }
+  .demo-table {
+    width: 100%;
+  }
+  
+  .mat-mdc-row .mat-mdc-cell {
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    background-color: blanchedalmond;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }

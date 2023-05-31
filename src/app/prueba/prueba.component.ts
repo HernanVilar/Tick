@@ -19,23 +19,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-prueba',
+  templateUrl: './prueba.component.html',
+  styleUrls: ['./prueba.component.css']
 })
-export class homeComponent {
+export class PruebaComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-  constructor()
-  {
-    // let data = localStorage.getItem('auth');
-
-    
-  }
-  ngOnInit()
-  {
-    // let data = {email:'German@gmail.com',contrasenia:'12345'}
-    // let date = JSON.stringify(data);
-    // localStorage.setItem("auth",date);
-  }
 }
