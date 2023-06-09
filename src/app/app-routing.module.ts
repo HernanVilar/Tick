@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:'',component:InicioComponent,canActivate:[EnviarhomeGuard]},
   {path:'ingreso', loadChildren: () => import("./ingreso/ingreso.module").then(m=>m.IngresoModule)},
   {path:'home', loadChildren: () => import("./home/home.module").then(m=>m.HomeModule),canActivate:[EnviarlogearGuard]},
+  {path:'altaTicket', loadChildren: () => import("./altas/altas.module").then(m=>m.AltasModule),canActivate:[EnviarlogearGuard]},
   // {path:'prue',component:PruebaComponent}
 ];
 

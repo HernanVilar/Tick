@@ -1,0 +1,29 @@
+<div id="formulario-ingreso">
+
+    <h1 mat-dialog-title id="formulario-ingreso-titulo">Alta Ticket</h1>
+    <div mat-dialog-content id="formulario-ingreso-contenido">
+        <div class="row">
+       
+
+            <div class="row">
+              <mat-form-field>
+                  <mat-label>Select an option</mat-label>
+                  <mat-select (selectionChange) = "onOptionChange($event)" >
+                  <mat-option value="desperfecto">Desperfecto</mat-option>
+                  <mat-option value="cambio">Cambio de plan</mat-option>
+                  <mat-option value="alta">Dar de alta</mat-option>
+                  <mat-option value="baja">Dar de baja</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+              <div>
+
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button mat-flat-button color="warn" id="formulario-ing-btn-cancelar" style="padding: 20px;" (click)="onNoClick()">Cancel</button>
+            <button mat-flat-button color="primary" id="formulario-ing-btn-enviar" style="padding: 20px;" (click)="enviarIngreso()" cdkFocusInitial>Cargar</button>
+        </div>
+    </div>
+
+</div>

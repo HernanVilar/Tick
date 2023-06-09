@@ -1,38 +1,27 @@
-<div class="principal">
-  <h1>Lista de tickets</h1>
-<div class="d">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-  
-    <tr class="solotop" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  
-</div>
+<div class="total">
+  <mat-card class="test">
+    <h1>TICKETS</h1>
+    <mat-card class="item-ticket">
+      <div class="col mx-0">
+          <p class="titulo-ticket">
+              <label class="valor-comentario-ticket">Necesito que me den bola urgentemente y hacer algo al respecto...</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+          <p class="asunto-ticket">
+              Asunto -  <label class="valor-asunto-ticket">Dar de baja</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+          <p class="actualizacion-ticket">
+              Últ. actualización - <label class="valor-actualizacion-ticket">10/02/2021</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+          <p class="estado-ticket">
+              Estado - <label class="valor-estado-ticket">Resuelto</label>
+          </p>
+      </div>
+  </mat-card>
+</mat-card>
 </div>

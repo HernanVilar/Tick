@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { homeComponent } from './home/home.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { homeComponent } from './home/home.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ]
 })
 export class HomeModule { }

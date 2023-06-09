@@ -1,0 +1,27 @@
+.principal
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form
+{
+    background-color: white;
+    opacity: 90%;
+    border-radius: 15px;
+    padding: 10px;
+}
+.margintop
+{
+    max-width: 50%;
+    margin: auto;
+}
+small
+{
+    color: red;
+}
+.centro
+{
+    text-align: center;
+}

@@ -4,6 +4,7 @@ import { LoginComponent } from '../ingreso/login/login.component';
 import { RegistrarComponent } from '../ingreso/registrar/registrar.component'
 import { Router } from '@angular/router';
 import { IngresosService } from '../services/ingresos.service';
+import { AltaTicketComponent } from '../altas/alta-ticket/alta-ticket.component';
 
 @Component({
   selector: 'app-navbar',
@@ -22,6 +23,14 @@ export class NavbarComponent {
   }
   open_Ingresar_Dialog_header2(): void {
     const dialogIngresarRef = this.dialog.open(RegistrarComponent,{
+    });
+
+      dialogIngresarRef.afterClosed().subscribe(result => {
+      // this.animal = result;
+    });
+  }
+  open_Ingresar_Dialog_header33(): void {
+    const dialogIngresarRef = this.dialog.open(AltaTicketComponent,{
     });
 
       dialogIngresarRef.afterClosed().subscribe(result => {

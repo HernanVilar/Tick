@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { PruebaComponent } from './prueba/prueba.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,8 @@ import { MatTableModule } from '@angular/material/table';
     InicioComponent,
     NavbarComponent,
     FooterComponent,
-    RegistrarComponent,
-    LoginComponent,
     PruebaComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     FormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
