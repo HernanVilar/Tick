@@ -1,27 +1,32 @@
 <div class="total">
   <mat-card class="test">
     <h1>TICKETS</h1>
-    <mat-card class="item-ticket">
+    <mat-card class="item-ticket" *ngFor="let item of ticketService.list">
       <div class="col mx-0">
           <p class="titulo-ticket">
-              <label class="valor-comentario-ticket">Necesito que me den bola urgentemente y hacer algo al respecto...</label>
+              <label class="valor-comentario-ticket">Necesito más información urgente !! !! ...</label>
           </p>
       </div>
       <div class="col mx-0">
           <p class="asunto-ticket">
-              Asunto -  <label class="valor-asunto-ticket">Dar de baja</label>
+              Asunto -  <label class="valor-asunto-ticket">{{item.asunto}}</label>
           </p>
       </div>
       <div class="col mx-0">
           <p class="actualizacion-ticket">
-              Últ. actualización - <label class="valor-actualizacion-ticket">10/02/2021</label>
+              Últ. actualización - <label class="valor-actualizacion-ticket">{{item.updatedAt}}</label>
           </p>
       </div>
       <div class="col mx-0">
           <p class="estado-ticket">
-              Estado - <label class="valor-estado-ticket">Resuelto</label>
+              Estado - <label class="valor-estado-ticket">{{item.estado}}</label>
           </p>
       </div>
+      <div class="col mx-0">
+        <p class="estado-ticket">
+            Usuario - <label class="valor-estado-ticket">{{item.tipoUsuario}}</label>
+        </p>
+    </div>
   </mat-card>
 </mat-card>
 </div>

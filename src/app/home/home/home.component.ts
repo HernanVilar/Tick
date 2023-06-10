@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AltaTicketService } from 'src/app/services/alta-ticket.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class homeComponent {
-  constructor()
+  constructor(public ticketService:AltaTicketService)
   {
     // let data = localStorage.getItem('auth');
-
-    
+    this.traeApi();
+  }
+  traeApi()
+  {
+    this.ticketService.getTicket().subscribe((e:any)=>{    
+      this.ticketService.list = e;
+      
+    })
   }
   ngOnInit()
   {
