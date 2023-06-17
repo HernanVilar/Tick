@@ -35,9 +35,9 @@ export class homeComponent {
     {
       this.descripcion = 'Todos los que en necesidad sean Normal y en Razon sean desperfecto'
     }
-    else if(data == 'gte')
+    else if(data == 'gt')
     {
-      this.descripcion = 'Todos los que en cantidad de color de bandera tengan a 2'
+      this.descripcion = 'Todos los que en cantidad de color de bandera tengan mayor a 2'
     }
     else if(data == 'gte')
     {
