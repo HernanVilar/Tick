@@ -6,10 +6,7 @@ import { EnviarlogearGuard } from './guards/enviarlogear.guard';
 import { PruebaComponent } from './prueba/prueba.component';
 
 const routes: Routes = [
-  {path:'',component:InicioComponent,canActivate:[EnviarhomeGuard]},
-  {path:'ingreso', loadChildren: () => import("./ingreso/ingreso.module").then(m=>m.IngresoModule)},
-  {path:'home', loadChildren: () => import("./home/home.module").then(m=>m.HomeModule),canActivate:[EnviarlogearGuard]},
-  {path:'altaTicket', loadChildren: () => import("./altas/altas.module").then(m=>m.AltasModule),canActivate:[EnviarlogearGuard]},
+  {path:'',loadChildren: () => import("./home/home.module").then(m=>m.HomeModule)},
   // {path:'prue',component:PruebaComponent}
 ];
 

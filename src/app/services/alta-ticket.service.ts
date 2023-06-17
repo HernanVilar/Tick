@@ -8,7 +8,8 @@ export class AltaTicketService {
   public estadoCuenta:boolean = false;
   // "https://app-node-7tbh.onrender.com/api/buscar/"
   private urlPost = "http://localhost:9000/api/altaTicket";
-  private urlGet = "http://localhost:9000/api/traerTickets";
+  private urlGet = "http://localhost:9000/api/traertodo";
+  private urltotal = "http://localhost:9000/api/buscar/";
   public list:any = [];
   constructor(private http:HttpClient) { }
 
@@ -20,6 +21,12 @@ export class AltaTicketService {
     
     const data = {email:email,asunto:asunto,tipoUsuario:tipo,estado:estado,derivadoDe:derivadoDe}
     return this.http.post(this.urlPost,data);
+  }
+  geteq(data:any)
+  {
+    let det = this.urltotal + data;
+    
+    return this.http.get(det);
   }
   getTicket()
   {

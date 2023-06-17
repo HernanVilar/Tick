@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { homeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     HomeRoutingModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
+    
   ]
 })
 export class HomeModule { }
