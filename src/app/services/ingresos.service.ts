@@ -9,6 +9,9 @@ export class IngresosService {
   // "https://app-node-7tbh.onrender.com/api/buscar/"
   private url = "https://app-node-7tbh.onrender.com/api/buscar/";
   private urlPost = "https://app-node-7tbh.onrender.com/api/registro";
+
+
+  
   constructor(private http:HttpClient) { }
 
   getApi(usuario:string,contrasenia:string){

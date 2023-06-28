@@ -9,8 +9,9 @@ export class AltaTicketService {
   // "https://app-node-7tbh.onrender.com/api/buscar/"
   private urlPost = "http://localhost:9000/api/altaTicket";
   private urlGet = "http://localhost:9000/api/traertodo";
-  private urltotal = "http://localhost:9000/api/buscar/";
+  private urltotal = "http://localhost:9000/api/buscar";
   public list:any = [];
+  public list2:any = null;
   constructor(private http:HttpClient) { }
 
 
@@ -24,7 +25,8 @@ export class AltaTicketService {
   }
   geteq(data:any)
   {
-    let det = this.urltotal + data;
+    let info = '?dato=' + data
+    let det = this.urltotal + info;
     
     return this.http.get(det);
   }

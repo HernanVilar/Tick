@@ -13,8 +13,22 @@
         <button class="btn btn-warning" (click) = "getecq('or')">OR</button>
         <button class="btn btn-warning" (click) = "getecq('in')">IN</button>
         <button class="btn btn-warning" (click) = "getecq('nin')">NIN</button>
+        <button class="btn btn-warning" (click) = "getecq('nor')">NOR</button>
+        <button class="btn btn-warning" (click) = "getecq('indice')">INDEX</button>
+        <button class="btn btn-warning" (click) = "getecq('not')">NOT</button>
+        <button class="btn btn-warning" (click) = "getecq('lookup')">LookUp</button>
+        <button class="btn btn-warning" (click) = "getecq('exists')">Exists</button>
+        <button class="btn btn-warning" (click) = "getecq('type')">Type</button>
+        <button class="btn btn-warning" (click) = "getecq('all')">All</button>
+        <button class="btn btn-warning" (click) = "getecq('elementmatch')">elm</button>
+        <button class="btn btn-warning" (click) = "getecq('group')">Group</button>
     </div>
-  <mat-card class="test">
+    <div  style="display: flex; justify-content: center; align-items: center;">
+        <button class="btn btn-warning" (click) = "getecq('info1')">Informe1</button>
+        <button class="btn btn-warning" (click) = "getecq('info2')">Informe2</button>
+        <button class="btn btn-warning" (click) = "getecq('info3')">Informe3</button>
+    </div>
+  <mat-card class="test" *ngIf="ticketService.list != null">
     <h1>TICKETS</h1>
     <mat-card class="item-ticket" *ngFor="let item of ticketService.list">
       <div class="col mx-0">
@@ -46,6 +60,58 @@
         <p class="estado-ticket">
             CantColorFlag - <label class="valor-estado-ticket">{{item.paisOrigen.cantColorFlag}}</label>
         </p>
+    </div>
+  </mat-card>
+</mat-card>
+
+
+
+
+<mat-card class="test" style="margin-top: 30px;" *ngIf="ticketService.list2 != null">
+    <h1>Lockoups</h1>
+    <mat-card class="item-ticket" *ngFor="let item of ticketService.list2">
+      <div class="col mx-0">
+          <p class="titulo-ticket">
+              <label class="valor-comentario-ticket">Necesito más información urgente !! !! ...</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+        <p class="asunto-ticket">
+            País -  <label class="valor-asunto-ticket t">{{item.Pais}}</label>
+        </p>
+    </div>
+      <div class="col mx-0">
+          <p class="asunto-ticket">
+              Capital -  <label class="valor-asunto-ticket t">{{item.Capital}}</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+          <p class="estado-ticket">
+              Continente - <label class="valor-estado-ticket t">{{item.Continente}}</label>
+          </p>
+      </div>
+      <div class="col mx-0">
+        <p class="estado-ticket">
+            Moneda - <label class="valor-estado-ticket t">{{item.Moneda}}</label>
+        </p>
+    </div>
+    <div class="col mx-0" *ngIf="monarca">
+        <p class="estado-ticket">
+            Rey - <label class="valor-estado-ticket t">{{item.Monarca}}</label>
+        </p>
+    </div>
+    
+    <div class="col mx-0" *ngFor="let item of item.d">
+        <p class="estado-ticket">
+            PaisOrigen - <label class="valor-estado-ticket">{{item.paisOrigen.pais}}</label>
+        </p>
+        <p class="estado-ticket">
+            Necedidad - <label class="valor-estado-ticket">{{item.unObjeto.Necedidad}}</label>
+        </p>
+        <p class="estado-ticket">
+            Razón - <label class="valor-estado-ticket">{{item.unObjeto.Razon}}</label>
+        </p>
+        
     </div>
   </mat-card>
 </mat-card>
